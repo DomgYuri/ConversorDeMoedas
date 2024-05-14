@@ -1,3 +1,6 @@
+package br.com.conversor.converte;
+
+import br.com.conversor.modelo.Moeda;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

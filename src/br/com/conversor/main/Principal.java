@@ -1,3 +1,8 @@
+package br.com.conversor.main;
+
+import br.com.conversor.converte.BuscaCambio;
+import br.com.conversor.converte.Conversor;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -5,7 +10,7 @@ public class Principal {
     public static void main(String[] args) throws IOException, InterruptedException {
         Conversor conversor = new Conversor();
         Scanner scanner = new Scanner(System.in);
-        OperacaoDeConverter operacaoDeConverter = new OperacaoDeConverter();
+        BuscaCambio operacaoDeConverter = new BuscaCambio();
 
         var escolha = 0;
 
@@ -25,37 +30,37 @@ public class Principal {
                         var moedaDoUsuario = conversor.Converter("USD");
                         System.out.println("Digite o valor que você deseja converter");
                         var valor = scanner.nextDouble();
-                        System.out.println(operacaoDeConverter.dolarPraReal(valor, moedaDoUsuario));
+                        System.out.println("Valor da conversão "+operacaoDeConverter.dolarPraReal(valor, moedaDoUsuario));
                         break;
                     case 2:
                         moedaDoUsuario = conversor.Converter("EUR");
                         System.out.println("Digite o valor que você deseja converter");
                         valor = scanner.nextDouble();
-                        System.out.println(operacaoDeConverter.euroPraReal(valor, moedaDoUsuario));
+                        System.out.println("Valor da conversão " + operacaoDeConverter.euroPraReal(valor, moedaDoUsuario));
                         break;
                     case 3:
                         moedaDoUsuario = conversor.Converter("ARS");
                         System.out.println("Digite o valor que você deseja converter");
                         valor = scanner.nextDouble();
-                        System.out.println(operacaoDeConverter.pesoArgentinoPraReal(valor, moedaDoUsuario));
+                        System.out.println("Valor da conversão " + operacaoDeConverter.pesoArgentinoPraReal(valor, moedaDoUsuario));
                         break;
                     case 4:
                         moedaDoUsuario = conversor.Converter("JPY");
                         System.out.println("Digite o valor que você deseja converter");
                         valor = scanner.nextDouble();
-                        System.out.println(operacaoDeConverter.ienesParaReal(valor, moedaDoUsuario));
+                        System.out.println("Valor da conversão " + operacaoDeConverter.ienesParaReal(valor, moedaDoUsuario));
                         break;
                     case 5:
                         moedaDoUsuario = conversor.Converter("CLP");
                         System.out.println("Digite o valor que você deseja converter");
                         valor = scanner.nextDouble();
-                        System.out.println(operacaoDeConverter.pesoChilenoPraReal(valor, moedaDoUsuario));
+                        System.out.println("Valor da conversão " + operacaoDeConverter.pesoChilenoPraReal(valor, moedaDoUsuario));
                         break;
                     case 6:
                         moedaDoUsuario = conversor.Converter("COP");
                         System.out.println("Digite o valor que você deseja converter");
                         valor = scanner.nextDouble();
-                        System.out.println(operacaoDeConverter.pesoColombianoPraReal(valor, moedaDoUsuario));
+                        System.out.println("Valor da conversão " + operacaoDeConverter.pesoColombianoPraReal(valor, moedaDoUsuario));
                         break;
                     case 7:
                         System.out.println("\nAplicação finalizada");

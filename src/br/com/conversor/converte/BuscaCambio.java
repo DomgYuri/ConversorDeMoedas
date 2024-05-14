@@ -1,4 +1,8 @@
-public class OperacaoDeConverter {
+package br.com.conversor.converte;
+
+import br.com.conversor.modelo.Moeda;
+
+public class BuscaCambio {
 
     public double dolarPraReal(double valorUser, Moeda moeda) {
         var resultado = valorUser * moeda.BRL();
